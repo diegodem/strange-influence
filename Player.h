@@ -7,8 +7,8 @@ public:
 	Player();
 	void moveRight(float pixels);
 	SDL_Rect *getRect();
-	float getX();
+	double getX();
 private:
-	float x, y;
+	double x, y;
 	SDL_Rect rect;
 };

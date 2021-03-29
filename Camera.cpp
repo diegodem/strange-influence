@@ -16,7 +16,7 @@ void Camera::moveLeft(float pixels)
 	x -= pixels;
 }
 
-float Camera::getX()
+double Camera::getX()
 {
 	return x;
 }

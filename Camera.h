@@ -7,7 +7,7 @@ public:
 	Camera();
 	void moveRight(float pixels);
 	void moveLeft(float pixels);
-	float getX();
+	double getX();
 private:
-	float x, y;
+	double x, y;
 };

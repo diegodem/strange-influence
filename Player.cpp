@@ -17,7 +17,7 @@ SDL_Rect *Player::getRect()
 	return &rect;
 }
 
-float Player::getX()
+double Player::getX()
 {
 	return x;
 }
