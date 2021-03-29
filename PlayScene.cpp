@@ -36,11 +36,11 @@ void PlayScene::update(Timer deltaTime, std::vector<SDL_Keycode> keysPressed, co
 	{
 		player.moveRight(deltaTime.getTime() * 30);
 
-		if (player.getX() >= 64.f)
+		if (player.getX() >= 64)
 		{
 			camera.moveRight(deltaTime.getTime() * 30);
 		}
-		player.getRect()->x = (int)round(player.getX()) - camera.getX();
+		player.getRect()->x = (int)round(player.getX() - camera.getX());
 	}
 	backgroundRect.x = - camera.getX();
 

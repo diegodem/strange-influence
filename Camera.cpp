@@ -16,7 +16,7 @@ void Camera::moveLeft(float pixels)
 	x -= pixels;
 }
 
-int Camera::getX()
+float Camera::getX()
 {
-	return (int)round(x);
+	return x;
 }
