@@ -2,6 +2,7 @@
 #include "Scene.h"
 #include "Camera.h"
 #include "Player.h"
+#include "Enemy.h"
 
 class PlayScene : public Scene
 {
@@ -18,4 +19,5 @@ private:
 	Camera camera;
 	Timer deltaTime;
 	Player player;
+	Enemy enemy;
 };

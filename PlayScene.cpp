@@ -46,6 +46,8 @@ void PlayScene::update(Timer deltaTime, std::vector<SDL_Keycode> keysPressed, co
 
 	player.update(deltaTime.getTime());
 
+	enemy.getRect()->x = (int)round(enemy.getX() - camera.getX());
+
 	deltaTime.start();
 }
 
@@ -57,6 +59,7 @@ void PlayScene::draw()
 	SDL_RenderCopy(renderer, backgroundTexture, NULL, &backgroundRect);
 	SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
 	SDL_RenderDrawRect(renderer, player.getRect());
+	SDL_RenderDrawRect(renderer, enemy.getRect());
 	
 	SDL_RenderPresent(renderer);
 }
