@@ -20,7 +20,7 @@ void Engine::loop()
 			{
 				quit = true;
 			}
-			else if (e.type == SDL_KEYDOWN)
+			else if (e.type == SDL_KEYDOWN && e.key.repeat == 0)
 			{
 				keysPressed.push_back(e.key.keysym.sym);
 			}

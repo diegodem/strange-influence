@@ -28,21 +28,23 @@ void PlayScene::update(Timer deltaTime, std::vector<SDL_Keycode> keysPressed, co
 	{
 		if (keysPressed[i] == SDLK_SPACE)
 		{
-			nextScene = (int)SceneList::PLAY_SCENE;
+			player.jump();
 		}
 
 	}
 	if (keyboardState[SDL_SCANCODE_D])
 	{
-		player.moveRight(deltaTime.getTime() * 30);
+		player.moveRight(deltaTime.getTime() * 50);
 
 		if (player.getX() >= 64)
 		{
-			camera.moveRight(deltaTime.getTime() * 30);
+			camera.moveRight(deltaTime.getTime() * 50);
 		}
 		player.getRect()->x = (int)round(player.getX() - camera.getX());
 	}
 	backgroundRect.x = - camera.getX();
+
+	player.update(deltaTime.getTime());
 
 	deltaTime.start();
 }
